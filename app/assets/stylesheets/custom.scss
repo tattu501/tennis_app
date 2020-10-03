@@ -1,0 +1,57 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body { 
+  background-image: image-url('6910.jpg'); 
+  background-size: cover;
+}
+
+.home-content {
+  text-align: center;
+
+  h1 {
+    color: #333333;
+  }
+
+  .btn-home {
+    width: 250px;
+    height: 60px;
+    font-size: 30px;
+  }
+
+  p {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.profile {
+  color: 333333;
+  text-align: center;
+}
+
+.profile-header {
+  color: 333333;
+  display: flex;
+  justify-content: center;
+
+  ul {
+    height: 300px;
+    list-style: none;
+    font-size: 30px;
+    padding-top: 10px;
+
+    li {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.profile-detail {
+  width: 100%;
+  margin-top: 30px;
+  padding: 0 100px;
+  color: #333333;
+  font-size: 24px;
+}
