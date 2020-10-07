@@ -2,8 +2,29 @@
   <div class="container">
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "ユーザ登録", signup_path, class: "btn btn-lg btn-primary btn-indent" %></li>
-        <li><%= link_to "ログイン", '#', class: "btn btn-lg btn-primary" %></li>
+      <% if logged_in? %>
+        <li><%= link_to "ユーザ一覧", '#', class: "btn btn-lg btn-primary btn-indent-right" %></li>
+        <li class="dropdown">
+          <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            アカウント <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu change-dropdown-menu">
+            <li><%= link_to "ユーザ情報", current_user %></li>
+            <li><%= link_to "ユーザ情報の編集", '#' %></li>
+            <li class="divider"></li>
+            <li>
+              <%= link_to "ログアウト", logout_path, method: :delete %>
+            </li>
+          </ul>
+        </li>
+      <% else %>
+        <% unless controller.controller_name == 'sessions' && controller.action_name == 'new' %>
+          <% unless controller.controller_name == 'users' && controller.action_name == 'new' %>
+            <li><%= link_to "ユーザ登録", signup_path, class: "btn btn-lg btn-primary btn-indent-right" %></li>
+          <% end %>
+          <li><%= link_to "ログイン", login_path, class: "btn btn-lg btn-primary" %></li>
+        <% end %>
+      <% end %>
       </ul>
     </nav>
   </div>
