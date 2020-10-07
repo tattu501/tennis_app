@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_04_013807) do
+ActiveRecord::Schema.define(version: 2020_10_07_150014) do
+
+  create_table "experiences", force: :cascade do |t|
+    t.integer "year"
+    t.integer "month"
+    t.text "explanation"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["year", "month"], name: "index_experiences_on_year_and_month", unique: true
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
