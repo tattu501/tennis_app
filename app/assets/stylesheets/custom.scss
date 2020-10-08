@@ -34,6 +34,14 @@ body {
   margin-right: 30px;
 }
 
+.btn-indent-top {
+  margin-top: 12px;
+}
+
+.btn-indent-bottom {
+  margin-bottom: 12px;
+}
+
 .title {
   text-align: center;
 }
@@ -81,6 +89,48 @@ body {
 }
 
 .profile-detail {
+  width: 100%;
+  margin-top: 30px;
+  padding: 0 100px;
+  color: #333333;
+  font-size: 24px;
+}
+
+.experience-title {
+  color: 333333;
+  text-align: center;
+}
+
+.experience-period {
+  color: 333333;
+  text-align: center;
+}
+
+.experience-index {
+  color: 333333;
+  display: flex;
+  justify-content: center;
+
+  ul {
+    height: 300px;
+    list-style: none;
+    font-size: 30px;
+    padding-top: 10px;
+
+    li {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.experience-image {
+  color: 333333;
+  display: flex;
+  justify-content: center;
+}
+
+.experience-detail {
   width: 100%;
   margin-top: 30px;
   padding: 0 100px;

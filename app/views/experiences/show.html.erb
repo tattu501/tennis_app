@@ -1,0 +1,20 @@
+<h1 class="experience-period">
+  <%= "#{@experience.year.to_s}年#{@experience.month.to_s}月" %>
+</h1>
+<div class="container navbar navbar-fixed-top">
+  <nav>
+    <ul class="nav navbar-nav navbar-left navbar-fixed-top">
+      <li><%= link_to "編集", edit_experience_path, class: "btn btn-lg btn-primary
+        btn-indent-left btn-indent-top" %></li>
+      <li><%= link_to "削除", @experience, method: :delete, 
+        data: { confirm: "本当に削除しますか？" }, class: "btn btn-lg btn-primary
+        btn-indent-left btn-indent-top" %></li>
+    </ul>
+  </nav>
+</div>
+<div class="experience-image">
+  <%= image_tag @experience.image if @experience.image.attached? %>
+</div>
+<div class="experience-detail">
+  <%= "#{@experience.explanation}" %>
+</div>
