@@ -1,0 +1,22 @@
+<h1 class="title">体験記の登録</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_with(model: @experience, local: true) do |f| %>
+      <%= render 'shared/experience_messages' %>
+
+      <%= f.label :year, "year(西暦年)" %>
+      <%= f.number_field :year, class: 'form-control' %>
+
+      <%= f.label :month, "month(月)" %>
+      <%= f.number_field :month, class: 'form-control' %>
+
+      <%= f.label :explanation, "explanation(内容)" %>
+      <%= f.text_area :explanation, class: 'form-control' %>
+
+      <%= f.submit "登録確定", class: "btn btn-primary" %>
+      <span class="image">
+        <%= f.file_field :image %>
+      </span>
+    <% end %>
+  </div>
+</div>
