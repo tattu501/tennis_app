@@ -1,4 +1,6 @@
 class ExperiencesController < ApplicationController
+  before_action :logged_in_user, only: [:new, :edit, :update, :destroy]
+  before_action :admin_user,     only: [:new, :edit, :update, :destroy]
   def new
     @experience = Experience.new
   end

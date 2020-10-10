@@ -1,18 +1,13 @@
 <h1 class="experience-title">体験記</h1>
-<div class="container navbar navbar-fixed-top">
-  <nav>
-    <ul class="nav navbar-nav navbar-left navbar-fixed-top">
-      <li><%= link_to "登録", new_experience_path, class: "btn btn-lg btn-primary
-        btn-indent-left btn-indent-top" %>
-      </li>
-    </ul>
-  </nav>
-</div>
+<% if logged_in? && admin_user? %>
+  <%= link_to "登録", new_experience_path, class: "btn btn-lg btn-primary
+    btn-indent-top-second btn-size btn-fixed-insert" %>
+<% end %>
 <div class="experience-index">
   <ul>
     <% @experiences.each do |experience| %>
       <li><%= link_to  "#{experience.year.to_s}年#{experience.month.to_s}月", 
-              experience, class: 'btn btn-primary btn-home' %>
+              experience, class: 'btn btn-primary btn-experiences' %>
       </li>
     <% end %>
   </ul>
