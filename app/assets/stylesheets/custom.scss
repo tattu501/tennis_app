@@ -124,6 +124,34 @@ body {
   font-size: 24px;
 }
 
+.user-title {
+  color: 333333;
+  text-align: center;
+}
+
+.user-index {
+  color: 333333;
+  display: flex;
+  justify-content: center;
+
+  ul {
+    height: 300px;
+    list-style: none;
+    font-size: 30px;
+    padding-top: 10px;
+
+    li {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.user-profile-header {
+  color: 333333;
+  text-align: center;
+}
+
 .experience-title {
   color: 333333;
   text-align: center;
