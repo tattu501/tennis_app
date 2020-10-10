@@ -12,7 +12,7 @@
 <% end %>
 </div>
 <div class="experience-image">
-  <%= image_tag @experience.image if @experience.image.attached? %>
+  <%= image_tag @experience.image, :size => '800x450' if @experience.image.attached? %>
 </div>
 <div class="experience-detail">
   <%= "#{@experience.explanation}" %>

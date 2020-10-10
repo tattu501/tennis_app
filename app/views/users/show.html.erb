@@ -1,9 +1,18 @@
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= @user.name %>
-      </h1>
-    </section>
-  </aside>
+<h1 class="profile">プロフィール</h1>
+<% if logged_in? %>
+  <ul class="btn-fixed-update nav navbar-nav">
+    <% if !current_user?(@user) && admin_user? %>
+      <li><%= link_to "削除", @user, method: :delete, 
+        data: { confirm: "本当に削除しますか？" }, class: "btn btn-lg btn-primary
+        btn-indent-left btn-indent-right-third btn-size" %></li>
+    <% end %>
+  </ul>
+<% end %>
+</div>
+<div class="profile-header">
+  <%= image_tag @user.image, :size => '240x300' if @user.image.attached? %>
+  <ul>
+    <li><%= "名前：#{@user.name}" %></li>
+    <li><%= "メールアドレス：#{@user.email}" %></li>
+  </ul>
 </div>
