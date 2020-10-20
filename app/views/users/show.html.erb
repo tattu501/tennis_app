@@ -13,6 +13,8 @@
   <%= image_tag @user.image, :size => '240x300' if @user.image.attached? %>
   <ul>
     <li><%= "名前：#{@user.name}" %></li>
-    <li><%= "メールアドレス：#{@user.email}" %></li>
   </ul>
+</div>
+<div class="profile-detail">
+  <%= @user.introduction %>
 </div>
