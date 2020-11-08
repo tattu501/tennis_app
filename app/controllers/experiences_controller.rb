@@ -17,7 +17,7 @@ class ExperiencesController < ApplicationController
   end
 
   def index
-    @experiences = Experience.select('id', 'year', 'month')
+    @experiences = Experience.select('id', 'date')
   end
 
   def show
@@ -46,6 +46,6 @@ class ExperiencesController < ApplicationController
 
   private
     def experience_params
-      params.require(:experience).permit(:year, :month, :explanation, :image)
+      params.require(:experience).permit(:date, :explanation, :image)
     end
 end
