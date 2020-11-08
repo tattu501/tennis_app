@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_17_013118) do
+ActiveRecord::Schema.define(version: 2020_11_08_091049) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -34,12 +34,9 @@ ActiveRecord::Schema.define(version: 2020_10_17_013118) do
   end
 
   create_table "experiences", force: :cascade do |t|
-    t.integer "year"
-    t.integer "month"
     t.text "explanation"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["year", "month"], name: "index_experiences_on_year_and_month", unique: true
   end
 
   create_table "terms", force: :cascade do |t|
