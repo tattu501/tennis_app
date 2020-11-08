@@ -6,7 +6,7 @@
 <div class="experience-index">
   <ul>
     <% @experiences.each do |experience| %>
-      <li><%= link_to  "#{experience.year.to_s}年#{experience.month.to_s}月", 
+      <li><%= link_to experience.date.to_s, 
               experience, class: 'btn btn-primary btn-experiences' %>
       </li>
     <% end %>
