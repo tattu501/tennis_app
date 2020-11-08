@@ -4,8 +4,8 @@
     <%= form_with(model: @experience, local: true) do |f| %>
       <%= render 'shared/experience_messages' %>
 
-      <%= f.label :month, "date(年月日)" %>
-      <%= f.date_select :date, use_month_numbers: true, start_year: 2019, class: 'form-control' %>
+      <%= f.label :date, "date(年月日)" %>
+      <%= f.date_field :date, use_month_numbers: true, start_year: 2019, class: "form-control date-picker" %>
 
       <%= f.label :explanation, "explanation(内容)" %>
       <%= f.text_area :explanation, class: 'form-control' %>
