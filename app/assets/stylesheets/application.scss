@@ -1,6 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "posts";
+@import "reset";
 
 /* mixins, variables, etc. */
 
@@ -15,6 +16,12 @@ $gray-medium-light: #eaeaea;
 body { 
   background-image: image-url('6910.jpg'); 
   background-size: cover;
+}
+
+h1 {
+  margin-top: 20px;
+  color: #333333;
+  font-size: 35px;
 }
 
 .container {
@@ -77,10 +84,6 @@ body {
 
 .home-content {
   text-align: center;
-
-  h1 {
-    color: #333333;
-  }
 
   .btn-home {
     width: 250px;
