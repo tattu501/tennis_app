@@ -4,8 +4,8 @@
       <h3>
         <span>新規投稿</span>
       </h3>
-      <%= fform_with(model: @post, local: true) do |f| %>
-        <%= render 'shared/error_messages', object: f.object %>
+      <%= form_with(model: @post, local: true) do |f| %>
+        <%= render 'shared/post_messages', object: f.object %>
         <div class="form_area">
           <div class="form_area__field">
             <div class="field_with_errors">
