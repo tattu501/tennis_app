@@ -8,5 +8,7 @@ Rails.application.routes.draw do
   resources :users
   resources :experiences
   resources :terms
-  resources :posts
+  resources :posts do
+    resources :comments, only: [:create]
+  end
 end
