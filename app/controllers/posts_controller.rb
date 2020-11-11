@@ -21,6 +21,9 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def edit
+  end
+
   private
     def post_params
       params.require(:post).permit(:content).merge(user_id: current_user.id)
