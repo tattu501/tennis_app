@@ -33,6 +33,12 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy 
+    @post.destroy
+    flash[:notice] = "削除しました"
+    redirect_to root_url
+  end
+
   private
     def post_params
       params.require(:post).permit(:content).merge(user_id: current_user.id)
