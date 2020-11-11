@@ -28,7 +28,7 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @comment.destroy
+    Comment.find(params[:id]).destroy
     redirect_to post_path(@post)
   end
 
@@ -38,6 +38,16 @@ class CommentsController < ApplicationController
     end
 
     def authenticate_admin!
+      @comment = Comment.find(params[:id])
+      
+      if @comment.user_id != current_user.id
+        flash[:notice] = "権限はありません"
+        redirect_to post_path(@comment.post_id)
+      end
+    end
+
+    # 正しいユーザーかどうか確認
+    def correct_user
       @comment = Comment.find(params[:id])
       
       if @comment.user_id != current_user.id
