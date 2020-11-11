@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   resources :experiences
   resources :terms
   resources :posts do
-    resources :comments, only: [:create]
+    resources :comments, only: [:create, :edit, :update, :destroy]
   end
 end
