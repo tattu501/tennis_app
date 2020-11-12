@@ -1,4 +1,4 @@
-<h1 class="title"><%= @term.term %></h1>
+<h3><%= @term.term %></h3>
 <% if logged_in? && admin_user? %>
   <ul class="btn-fixed-update nav navbar-nav">
     <li><%= link_to "編集", edit_term_path, class: "btn btn-lg 
