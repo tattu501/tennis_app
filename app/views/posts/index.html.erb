@@ -1,9 +1,9 @@
-<h1 class="title">掲示板</h1>
-<% if logged_in? %>
-  <%= link_to "投稿", new_post_path, class: "btn btn-lg btn-primary
-    btn-indent-top-second btn-size btn-fixed-insert" %>
-<% end %>
 <div class="post_wrapper">
+  <div class="post_wrapper__header">
+    <h3>
+      <span>投稿一覧</span>
+    </h3>
+  </div>
   <div class="post_wrapper__content">
     <ul class="post_wrapper__content__post_list">
       <% if @posts.count == 0 %>
