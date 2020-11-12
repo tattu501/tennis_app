@@ -2,6 +2,7 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "modules/body";
 @import "shared/header";
 @import "posts";
 @import "comments";
@@ -17,9 +18,9 @@ $gray-medium-light: #eaeaea;
   box-sizing:         border-box;
 }
 
-body { 
-  background-image: image-url('6910.jpg'); 
-  background-size: cover;
+h3 {
+  text-align: center;
+  font-size: $font_size_h3;
 }
 
 .container {
