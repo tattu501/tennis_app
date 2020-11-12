@@ -11,8 +11,9 @@
 
   <body>
     <%= render 'shared/header' %>
-    <%= yield %>
-    <div class="indent-block">
+    <div class="wrapper">
+      <%= yield %>
+    </div>
     <%= render 'shared/footer' %>
   </body>
 </html>
