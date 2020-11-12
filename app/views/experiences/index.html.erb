@@ -1,8 +1,4 @@
-<h1 class="title">体験記</h1>
-<% if logged_in? && admin_user? %>
-  <%= link_to "登録", new_experience_path, class: "btn btn-lg btn-primary
-    btn-indent-top-second btn-size btn-fixed-insert" %>
-<% end %>
+<h3>体験記</h3>
 <div class="experience-index">
   <ul>
     <% @experiences.each do |experience| %>
