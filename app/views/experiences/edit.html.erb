@@ -1,6 +1,4 @@
-<h1 class="experience-period">
-  <%= @experience.date.to_s %>
-</h1>
+<h3><%= @experience.date.to_s %></h3>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_with(model: @experience, local: true) do |f| %>
