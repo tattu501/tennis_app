@@ -1,16 +1,4 @@
-<h1 class="experience-period">
-  <%= @experience.date.to_s %>
-</h1>
-<% if logged_in? && admin_user? %>
-  <ul class="btn-fixed-update nav navbar-nav">
-    <li><%= link_to "編集", edit_experience_path, class: "btn btn-lg 
-      btn-primary btn-size" %></li>
-    <li><%= link_to "削除", @experience, method: :delete, 
-      data: { confirm: "本当に削除しますか？" }, class: "btn btn-lg btn-primary
-      btn-indent-left btn-indent-right-third btn-size" %></li>
-  </ul>
-<% end %>
-</div>
+<h3><%= @experience.date.to_s %></h3>
 <div class="experience-image">
   <%= image_tag @experience.image, :size => '800x450' if @experience.image.attached? %>
 </div>
