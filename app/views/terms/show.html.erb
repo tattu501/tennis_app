@@ -1,13 +1,6 @@
+<% breadcrumb :term_show, @term %>
+<%= render "shared/breadcrumbs" %>
 <h3><%= @term.term %></h3>
-<% if logged_in? && admin_user? %>
-  <ul class="btn-fixed-update nav navbar-nav">
-    <li><%= link_to "編集", edit_term_path, class: "btn btn-lg 
-      btn-primary btn-size" %></li>
-    <li><%= link_to "削除", @term, method: :delete, 
-      data: { confirm: "本当に削除しますか？" }, class: "btn btn-lg btn-primary
-      btn-indent-left btn-indent-right-third btn-size" %></li>
-  </ul>
-<% end %>
 </div>
 <div class="term-image">
   <%= image_tag @term.image, :size => '800x450' if @term.image.attached? %>
