@@ -18,7 +18,7 @@
   &__content {
     margin: 0 160px;
 
-    // 体験記一覧
+    // 用語一覧
     &__term_list {
       color: 333333;
       display: flex;
@@ -36,7 +36,7 @@
         }
       }
     }
-    // 体験記詳細
+    // 用語詳細
     &__term_show {
       padding: 0 48px;
       .term_image {
