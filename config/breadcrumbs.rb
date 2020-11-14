@@ -24,22 +24,22 @@ end
 
 crumb :user_show do |user|
   link "#{user.name}のプロフィール", user_path
-  parent :root
+  parent :users
 end
 
 crumb :user_edit do |user|
   link "#{user.name}のプロフィール編集", edit_user_path
-  parent :root
+  parent :users
 end
 
 crumb :posts do
-  link "投稿一覧", posts_path
+  link "掲示板", posts_path
   parent :root
 end
 
 crumb :post_new do
   link "新規投稿", new_post_path
-  parent :root
+  parent :posts
 end
 
 crumb :post_show do |post|
@@ -58,7 +58,7 @@ crumb :comment_edit do |comment|
 end
 
 crumb :experiences do
-  link "体験記一覧", experiences_path
+  link "体験記", experiences_path
   parent :root
 end
 
@@ -68,7 +68,7 @@ crumb :experience_new do
 end
 
 crumb :experience_show do |experience|
-  link "#{experience.date.to_s}の体験記", experience_path
+  link experience.date.to_s, experience_path
   parent :experiences
 end
 
