@@ -1,22 +1,20 @@
-<% breadcrumb :user_show, @user %>
-<%= render "shared/breadcrumbs" %>
-<h3>プロフィール</h3>
-<% if logged_in? %>
-  <ul class="btn-fixed-update nav navbar-nav">
-    <% if !current_user?(@user) && admin_user? %>
-      <li><%= link_to "削除", @user, method: :delete, 
-        data: { confirm: "本当に削除しますか？" }, class: "btn btn-lg btn-primary
-        btn-indent-left btn-indent-right-third btn-size" %></li>
-    <% end %>
-  </ul>
-<% end %>
-</div>
-<div class="profile-header">
-  <%= image_tag @user.image, :size => '240x300' if @user.image.attached? %>
-  <ul>
-    <li><%= "名前：#{@user.name}" %></li>
-  </ul>
-</div>
-<div class="profile-detail">
-  <%= @user.introduction %>
+<div class="user_wrapper">
+  <% breadcrumb :user_show, @user %>
+  <%= render "shared/breadcrumbs" %>
+  <div class="user_wrapper__header">
+    <h3>プロフィール</h3>
+  </div>
+    <div class="user_wrapper__content">
+      <div class="user_wrapper__content__user_show">
+        <div class="user_image">
+          <%= image_tag @user.image, :size => '240x300' if @user.image.attached? %>
+        <div class="user_name">
+          <%= "名前：#{@user.name}" %>
+        </div>
+        <div class="user_detail">
+          <%= @user.introduction %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
