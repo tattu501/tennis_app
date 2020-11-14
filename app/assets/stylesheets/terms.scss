@@ -38,18 +38,16 @@
     }
     // 用語詳細
     &__term_show {
-      padding: 0 48px;
+      margin-top: 30px;
       .term_image {
-        color: 333333;
-        display: flex;
-        justify-content: center;
+        text-align: center;
       }
       .term_detail {
         width: 100%;
         margin-top: 30px;
-        padding: 0 100px;
+        word-wrap: break-word;
         color: #333333;
-        font-size: 24px;
+        font-size: 30px;
       }
     }
   }
