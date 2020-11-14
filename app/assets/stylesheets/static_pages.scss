@@ -36,28 +36,35 @@
     // 筆者プロフィール
     &__static_pages_profile {
       padding: 0 48px;
-      .static_pages_image {
-        color: 333333;
-        display: flex;
-        justify-content: center;
-      }
       ul {
         height: 300px;
         list-style: none;
-        font-size: 30px;
         padding-top: 10px;
-    
+        display: flex;
         li {
-          margin-top: 30px;
-          margin-bottom: 30px;
+          .static_pages_image {
+            color: 333333;
+          }
+          ul {
+            width: 500px;
+            display: list-item;
+            list-style: none;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            margin-left: 30px;
+            li {
+              font-size: 30px;
+              margin-top: 30px;
+            }
+          }
         }
       }
       .static_pages_detail {
-        width: 100%;
-        margin-top: 30px;
-        padding: 0 100px;
+        word-wrap: break-word;
+        margin-top: 60px;
         color: #333333;
-        font-size: 24px;
+        font-size: 18px;
       }
     }
   }
