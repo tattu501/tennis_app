@@ -6,9 +6,12 @@
   </div>
   <div class="term_wrapper__content">
     <div class="term_wrapper__content__term_show">
-      <%= image_tag @term.image, :size => '800x450' if @term.image.attached? %>
+      <div class="term_image">
+        <%= image_tag @term.image, :size => '600x300' if @term.image.attached? %>
+      </div>
+      <div class="term_detail">
+        <%= "#{@term.explanation}" %>
+      </div>
     </div>
-    <div class="term_detail">
-      <%= "#{@term.explanation}" %>
   </div>
 </div>
