@@ -6,11 +6,16 @@
   </div>
     <div class="user_wrapper__content">
       <div class="user_wrapper__content__user_show">
-        <div class="user_image">
-          <%= image_tag @user.image, :size => '240x300' if @user.image.attached? %>
-        <div class="user_name">
-          <%= "名前：#{@user.name}" %>
-        </div>
+        <ul>
+          <% if @user.image.attached? %>
+            <li>
+              <%= image_tag @user.image, :size => '160x200' %>
+            </li>
+          <% end %>
+          <li>
+            <%= "名前：#{@user.name}" %>
+          </li>
+        </ul>
         <div class="user_detail">
           <%= @user.introduction %>
         </div>
