@@ -1,3 +1,5 @@
+<% breadcrumb :experience_show, @experience %>
+<%= render "shared/breadcrumbs" %>
 <h3><%= @experience.date.to_s %></h3>
 <div class="experience-image">
   <%= image_tag @experience.image, :size => '800x450' if @experience.image.attached? %>
