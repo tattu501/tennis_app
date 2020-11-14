@@ -1,11 +1,12 @@
-<div class="experience_wrapper">
+<div class="term_wrapper">
   <% breadcrumb :term_edit, @term %>
   <%= render "shared/breadcrumbs" %>
+  <div class="term_wrapper__header">
     <h3><%= @term.term %></h3>
   </div>
-  <div class="experience_wrapper__content">
+  <div class="term_wrapper__content">
     <%= form_with(model: @term, local: true) do |f| %>
-      <%= render 'shared/term_messages' %>
+      <%= render 'shared/error_messages', object: f.object %>
 
       <%= f.label :explanation, "explanation(内容)" %>
       <%= f.text_area :explanation, class: 'form-control' %>
