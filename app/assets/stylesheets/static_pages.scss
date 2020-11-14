@@ -1,3 +1,64 @@
-// Place all the styles related to the static_pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+@import "config/variables";
+
+.home_wrapper {
+  text-align: center;
+
+  .btn-home {
+    width: 250px;
+    height: 60px;
+    font-size: 30px;
+  }
+
+  p {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.static_pages_wrapper {
+  width: $fix_width;
+  height: 100%;
+  margin: 0 auto;
+  & h3 {
+    text-align: center;
+    font-size: $font_size_h3;
+  }
+  &__header {
+    padding: 0 160px;
+    .back_link {
+      color: #337ab7;
+      margin: 16px 48px 12px;
+    }
+  }
+  &__content {
+    margin: 0 160px;
+
+    // 筆者プロフィール
+    &__static_pages_profile {
+      padding: 0 48px;
+      .static_pages_image {
+        color: 333333;
+        display: flex;
+        justify-content: center;
+      }
+      ul {
+        height: 300px;
+        list-style: none;
+        font-size: 30px;
+        padding-top: 10px;
+    
+        li {
+          margin-top: 30px;
+          margin-bottom: 30px;
+        }
+      }
+      .static_pages_detail {
+        width: 100%;
+        margin-top: 30px;
+        padding: 0 100px;
+        color: #333333;
+        font-size: 24px;
+      }
+    }
+  }
+}
