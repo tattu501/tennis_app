@@ -39,20 +39,21 @@
     // ユーザ詳細
     &__user_show {
       padding: 0 48px;
-      .user_image {
-        color: 333333;
+      ul {
+        list-style: none;
+        padding-top: 10px;
         display: flex;
-        justify-content: center;
-      }
-      .user_name {
-
+        li {
+          margin: 0 auto;
+          font-size: 30px;
+          margin-top: 20px;
+        }
       }
       .user_detail {
-        width: 100%;
+        word-wrap: break-word;
         margin-top: 30px;
-        padding: 0 150px;
         color: #333333;
-        font-size: 24px;
+        font-size: 18px;
       }
     }
   }
