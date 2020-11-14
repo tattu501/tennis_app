@@ -6,7 +6,7 @@
   </div>
   <div class="term_wrapper__content">
     <%= form_with(model: @term, local: true) do |f| %>
-      <%= render 'shared/term_messages' %>
+      <%= render 'shared/error_messages', object: f.object %>
 
       <%= f.label :term, "term(用語)" %>
       <%= f.text_field :term, class: 'form-control' %>
