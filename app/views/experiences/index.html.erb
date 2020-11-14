@@ -1,12 +1,18 @@
-<% breadcrumb :experiences %>
-<%= render "shared/breadcrumbs" %>
-<h3>体験記</h3>
-<div class="experience-index">
-  <ul>
-    <% @experiences.each do |experience| %>
-      <li><%= link_to experience.date.to_s, 
-              experience, class: 'btn btn-primary btn-experiences' %>
-      </li>
-    <% end %>
-  </ul>
+<div class="experience_wrapper">
+  <% breadcrumb :experiences %>
+  <%= render "shared/breadcrumbs" %>
+  <div class="experience_wrapper__header">
+    <h3>体験記</h3>
+  </div>
+  <div class="experience_wrapper__content">
+    <div class="experience_wrapper__content__experience_list">
+      <ul>
+        <% @experiences.each do |experience| %>
+          <li><%= link_to experience.date.to_s, 
+                  experience, class: 'btn btn-primary btn-experiences' %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
 </div>
