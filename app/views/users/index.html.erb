@@ -1,4 +1,6 @@
-<h1 class="user-title">ユーザ一覧</h1>
+<% breadcrumb :users %>
+<%= render "shared/breadcrumbs" %>
+<h3>ユーザ一覧</h3>
 <div class="user-index">
   <ul>
     <% @users.each do |user| %>
