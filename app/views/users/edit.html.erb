@@ -8,19 +8,19 @@
     <%= form_with(model: @user, local: true) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
 
-      <%= f.label :name, "name(名前)" %>
+      <%= f.label :name, "名前" %>
       <%= f.text_field :name, class: 'form-control' %>
 
-      <%= f.label :email, "email(メールアドレス)" %>
+      <%= f.label :email, "メールアドレス" %>
       <%= f.email_field :email, class: 'form-control' %>
 
-      <%= f.label :introduction, "introduction(自己紹介文、任意)" %>
+      <%= f.label :introduction, "自己紹介文（任意）" %>
       <%= f.text_area :introduction, class: 'form-control' %>
 
-      <%= f.label :password, "password(パスワード)" %>
+      <%= f.label :password, "パスワード" %>
       <%= f.password_field :password, class: 'form-control' %>
 
-      <%= f.label :password_confirmation, "password_confirmation(パスワード確認)" %>
+      <%= f.label :password_confirmation, "パスワード確認" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
       <%= f.submit "更新", class: "btn btn-primary" %>
