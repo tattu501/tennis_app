@@ -6,7 +6,7 @@
   </div>
   <div class="experience_wrapper__content">
     <%= form_with(model: @experience, local: true) do |f| %>
-      <%= render 'shared/experience_messages' %>
+      <%= render 'shared/error_messages', object: f.object %>
 
       <%= f.label :date, "date(年月日)" %>
       <%= f.date_field :date, use_month_numbers: true, start_year: 2019, class: "form-control date-picker" %>
