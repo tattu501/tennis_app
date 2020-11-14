@@ -1,4 +1,6 @@
-<h1 class="profile">プロフィール</h1>
+<% breadcrumb :user_show, @user %>
+<%= render "shared/breadcrumbs" %>
+<h3>プロフィール</h3>
 <% if logged_in? %>
   <ul class="btn-fixed-update nav navbar-nav">
     <% if !current_user?(@user) && admin_user? %>
