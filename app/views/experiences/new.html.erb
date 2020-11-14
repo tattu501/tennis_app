@@ -8,10 +8,10 @@
     <%= form_with(model: @experience, local: true) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
 
-      <%= f.label :date, "date(年月日)" %>
+      <%= f.label :date, "日付" %>
       <%= f.date_field :date, use_month_numbers: true, start_year: 2019, class: "form-control date-picker" %>
 
-      <%= f.label :explanation, "explanation(内容)" %>
+      <%= f.label :explanation, "内容" %>
       <%= f.text_area :explanation, class: 'form-control' %>
 
       <%= f.submit "登録確定", class: "btn btn-primary" %>
