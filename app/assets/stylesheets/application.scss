@@ -4,10 +4,12 @@
 @import "font-awesome";
 @import "modules/body";
 @import "shared/header";
+@import "static_pages";
 @import "experiences";
 @import "terms";
 @import "posts";
 @import "comments";
+@import "users";
 @import "reset";
 
 /* mixins, variables, etc. */
@@ -18,15 +20,6 @@ $gray-medium-light: #eaeaea;
   -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
   box-sizing:         border-box;
-}
-
-h3 {
-  text-align: center;
-  font-size: $font_size_h3;
-}
-
-.container {
-  margin-top: 10px;
 }
 
 .header-indent {
@@ -83,21 +76,6 @@ h3 {
   text-align: center;
 }
 
-.home-content {
-  text-align: center;
-
-  .btn-home {
-    width: 250px;
-    height: 60px;
-    font-size: 30px;
-  }
-
-  p {
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-}
-
 .profile {
   color: 333333;
   text-align: center;
@@ -129,98 +107,22 @@ h3 {
   font-size: 24px;
 }
 
-.user-title {
-  color: 333333;
-  text-align: center;
-}
-
-.user-index {
-  color: 333333;
-  display: flex;
-  justify-content: center;
-
-  ul {
-    height: 300px;
-    list-style: none;
-    font-size: 30px;
-    padding-top: 10px;
-
-    li {
-      margin-top: 30px;
-      margin-bottom: 30px;
-    }
-  }
-}
-
-.user-profile-header {
-  color: 333333;
-  text-align: center;
-}
-
-.experience-title {
-  color: 333333;
-  text-align: center;
-}
-
 .btn-experiences {
   width: 250px;
   height: 60px;
   font-size: 30px;
 }
 
-.experience-period {
-  color: 333333;
-  text-align: center;
+.btn-terms {
+  width: 250px;
+  height: 60px;
+  font-size: 30px;
 }
 
-.experience-index {
-  color: 333333;
-  display: flex;
-  justify-content: center;
-
-  ul {
-    height: 300px;
-    list-style: none;
-    font-size: 30px;
-    padding-top: 10px;
-
-    li {
-      margin-top: 30px;
-      margin-bottom: 30px;
-    }
-  }
-}
-
-.term-index {
-  color: 333333;
-  display: flex;
-  justify-content: center;
-
-  ul {
-    height: 300px;
-    list-style: none;
-    font-size: 30px;
-    padding-top: 10px;
-
-    li {
-      margin-top: 30px;
-      margin-bottom: 30px;
-    }
-  }
-}
-
-.term-image {
-  color: 333333;
-  display: flex;
-  justify-content: center;
-}
-
-.term-detail {
-  width: 100%;
-  margin-top: 30px;
-  padding: 0 100px;
-  color: #333333;
-  font-size: 24px;
+.btn-users {
+  width: 250px;
+  height: 60px;
+  font-size: 30px;
 }
 
 /* forms */
@@ -253,41 +155,4 @@ input {
 
 .change-dropdown-menu {
   background-color: #DDFFDD;
-}
-
-.row {
-  width: 100%;
-}
-
-.indent-block {
-  height: 50px;
-}
-
-/* footer */
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  color: #777;
-}
-
-footer a {
-  color: #555;
-}
-
-footer a:hover {
-  color: #222;
-}
-
-footer small {
-  float: left;
-}
-
-footer ul {
-  float: left;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
 }
