@@ -47,9 +47,9 @@ crumb :post_edit do |post|
   parent :post_show, post
 end
 
-crumb :comment_edit do |comment|
+crumb :comment_edit do |comment, post|
   link "#{comment.user.name}さんのコメントを編集", edit_post_comment_path
-  parent :post_show, comment.post
+  parent :post_show, post
 end
 
 crumb :experiences do
