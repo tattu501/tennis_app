@@ -6,7 +6,7 @@
   </div>
   <div class="user_wrapper__content">
     <%= form_with(model: @user, local: true) do |f| %>
-      <%= render 'shared/error_messages' %>
+      <%= render 'shared/error_messages', object: f.object %>
 
       <%= f.label :name, "name(名前)" %>
       <%= f.text_field :name, class: 'form-control' %>
