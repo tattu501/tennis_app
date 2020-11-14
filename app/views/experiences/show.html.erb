@@ -1,9 +1,17 @@
-<% breadcrumb :experience_show, @experience %>
-<%= render "shared/breadcrumbs" %>
-<h3><%= @experience.date.to_s %></h3>
-<div class="experience-image">
-  <%= image_tag @experience.image, :size => '800x450' if @experience.image.attached? %>
-</div>
-<div class="experience-detail">
-  <%= "#{@experience.explanation}" %>
+<div class="experience_wrapper">
+  <% breadcrumb :experience_show, @experience %>
+  <%= render "shared/breadcrumbs" %>
+  <div class="experience_wrapper__header">
+    <h3><%= @experience.date.to_s %></h3>
+  </div>
+  <div class="experience_wrapper__content">
+    <div class="experience_wrapper__content__experience_show">
+      <div class="experience_image">
+        <%= image_tag @experience.image, :size => '800x450' if @experience.image.attached? %>
+      </div>
+      <div class="experience_detail">
+        <%= "#{@experience.explanation}" %>
+      </div>
+    </div>
+  </div>
 </div>
