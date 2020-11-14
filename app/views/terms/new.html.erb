@@ -1,8 +1,10 @@
-<% breadcrumb :term_new, @term %>
-<%= render "shared/breadcrumbs" %>
-<h3>用語の登録</h3>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
+<div class="term_wrapper">
+  <% breadcrumb :term_new, @term %>
+  <%= render "shared/breadcrumbs" %>
+  <div class="term_wrapper__header">
+    <h3>用語の登録</h3>
+  </div>
+  <div class="term_wrapper__content">
     <%= form_with(model: @term, local: true) do |f| %>
       <%= render 'shared/term_messages' %>
 
