@@ -1,12 +1,14 @@
-<h1 class="experience-period">
-  <%= @experience.date.to_s %>
-</h1>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
+<div class="experience_wrapper">
+  <% breadcrumb :experience_edit, @experience %>
+  <%= render "shared/breadcrumbs" %>
+  <div class="experience_wrapper__header">
+    <h3><%= @experience.date.to_s %></h3>
+  </div>
+  <div class="experience_wrapper__content">
     <%= form_with(model: @experience, local: true) do |f| %>
-      <%= render 'shared/experience_messages' %>
+      <%= render 'shared/error_messages', object: f.object %>
 
-      <%= f.label :explanation, "explanation(内容)" %>
+      <%= f.label :explanation, "内容" %>
       <%= f.text_area :explanation, class: 'form-control' %>
 
       <%= f.submit "更新", class: "btn btn-primary" %>

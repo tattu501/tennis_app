@@ -1,0 +1,70 @@
+<header class="header">
+  <div class="header__bar">
+    <h1>
+      <%= link_to "未経験から始めるテニス", root_path %>
+    </h1>
+    <ul class="header__bar__user_nav">
+      <% if logged_in? %>
+        <li class="header__bar__user_nav__btn">
+          <%= link_to "ユーザ一覧", users_path %>
+        </li>
+        <li class="dropdown header__bar__user_nav__btn">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            アカウント<b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu change-dropdown-menu">
+            <li><%= link_to "プロフィール", current_user %></li>
+            <li><%= link_to "プロフィールの編集", edit_user_path(current_user) %></li>
+            <li><%= link_to "ログアウト", logout_path, method: :delete %></li>
+          </ul>
+        </li>
+        <li class="header__bar__user_nav__btn">
+          <%= link_to "掲示板への投稿", new_post_path %>
+        </li>
+        <% if logged_in? && admin_user? %>
+          <% if controller.controller_name == 'experiences' && controller.action_name == 'index' %>
+            <li class="header__bar__user_nav__btn">
+              <%= link_to "体験記の登録", new_experience_path %>
+            </li>
+          <% end %>
+          <% if controller.controller_name == 'experiences' && controller.action_name == 'show' %>
+            <li class="header__bar__user_nav__btn">
+              <%= link_to "編集", edit_experience_path %>
+            </li>
+            <li class="header__bar__user_nav__btn">
+              <%= link_to "削除", @experience, method: :delete, data: { confirm: "本当に削除しますか？" } %>
+            </li>
+          <% end %>
+          <% if controller.controller_name == 'terms' && controller.action_name == 'index' %>
+            <li class="header__bar__user_nav__btn">
+              <%= link_to "用語の登録", new_term_path %>
+            </li>
+          <% end %>
+          <% if controller.controller_name == 'terms' && controller.action_name == 'show' %>
+            <li class="header__bar__user_nav__btn">
+              <%= link_to "編集", edit_term_path %>
+            </li>
+            <li class="header__bar__user_nav__btn">
+              <%= link_to "削除", @term, method: :delete, data: { confirm: "本当に削除しますか？" } %>
+            </li>
+          <% end %>
+          <% if controller.controller_name == 'users' && controller.action_name == 'show' %>
+            <% if !current_user?(@user) %>
+              <li class="header__bar__user_nav__btn">
+                <%= link_to "削除", @user, method: :delete, data: { confirm: "本当に削除しますか？" } %>
+              </li>
+            <% end %>
+          <% end %>
+        <% end %>
+      <% else %>
+        <li class="header__bar__user_nav__btn"><%= link_to "ユーザ登録", signup_path %></li>
+        <li class="header__bar__user_nav__btn"><%= link_to "ログイン", login_path %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% flash.each do |message_type, message| %>
+    <div class="notifications">
+      <div class="<%= message_type %>"><%= message %></div>
+    </div>
+  <% end %>
+</header>

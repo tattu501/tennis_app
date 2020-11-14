@@ -1,3 +1,54 @@
-// Place all the styles related to the Terms controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+@import "config/variables";
+
+.term_wrapper {
+  width: $fix_width;
+  height: 100%;
+  margin: 0 auto;
+  & h3 {
+    text-align: center;
+    font-size: $font_size_h3;
+  }
+  &__header {
+    padding: 0 160px;
+    .back_link {
+      color: #337ab7;
+      margin: 16px 48px 12px;
+    }
+  }
+  &__content {
+    margin: 0 160px;
+
+    // 用語一覧
+    &__term_list {
+      color: 333333;
+      display: flex;
+      justify-content: center;
+    
+      ul {
+        height: 300px;
+        list-style: none;
+        font-size: 30px;
+        padding-top: 10px;
+    
+        li {
+          margin-top: 30px;
+          margin-bottom: 30px;
+        }
+      }
+    }
+    // 用語詳細
+    &__term_show {
+      margin-top: 30px;
+      .term_image {
+        text-align: center;
+      }
+      .term_detail {
+        width: 100%;
+        margin-top: 30px;
+        word-wrap: break-word;
+        color: #333333;
+        font-size: 30px;
+      }
+    }
+  }
+}

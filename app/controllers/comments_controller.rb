@@ -5,7 +5,6 @@ class CommentsController < ApplicationController
 
   def edit
     @comment = Comment.find(params[:id])
-    @comments = @post.comments.includes(:user).order("created_at DESC")
   end
 
   def create

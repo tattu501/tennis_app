@@ -1,17 +1,17 @@
-<h1 class="title"><%= @term.term %></h1>
-<% if logged_in? && admin_user? %>
-  <ul class="btn-fixed-update nav navbar-nav">
-    <li><%= link_to "編集", edit_term_path, class: "btn btn-lg 
-      btn-primary btn-size" %></li>
-    <li><%= link_to "削除", @term, method: :delete, 
-      data: { confirm: "本当に削除しますか？" }, class: "btn btn-lg btn-primary
-      btn-indent-left btn-indent-right-third btn-size" %></li>
-  </ul>
-<% end %>
-</div>
-<div class="term-image">
-  <%= image_tag @term.image, :size => '800x450' if @term.image.attached? %>
-</div>
-<div class="term-detail">
-  <%= "#{@term.explanation}" %>
+<div class="term_wrapper">
+  <% breadcrumb :term_show, @term %>
+  <%= render "shared/breadcrumbs" %>
+  <div class="term_wrapper__header">
+    <h3><%= @term.term %></h3>
+  </div>
+  <div class="term_wrapper__content">
+    <div class="term_wrapper__content__term_show">
+      <div class="term_image">
+        <%= image_tag @term.image, :size => '600x300' if @term.image.attached? %>
+      </div>
+      <div class="term_detail">
+        <%= "#{@term.explanation}" %>
+      </div>
+    </div>
+  </div>
 </div>

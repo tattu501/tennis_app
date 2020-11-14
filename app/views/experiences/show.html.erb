@@ -1,19 +1,17 @@
-<h1 class="experience-period">
-  <%= @experience.date.to_s %>
-</h1>
-<% if logged_in? && admin_user? %>
-  <ul class="btn-fixed-update nav navbar-nav">
-    <li><%= link_to "編集", edit_experience_path, class: "btn btn-lg 
-      btn-primary btn-size" %></li>
-    <li><%= link_to "削除", @experience, method: :delete, 
-      data: { confirm: "本当に削除しますか？" }, class: "btn btn-lg btn-primary
-      btn-indent-left btn-indent-right-third btn-size" %></li>
-  </ul>
-<% end %>
-</div>
-<div class="experience-image">
-  <%= image_tag @experience.image, :size => '800x450' if @experience.image.attached? %>
-</div>
-<div class="experience-detail">
-  <%= "#{@experience.explanation}" %>
+<div class="experience_wrapper">
+  <% breadcrumb :experience_show, @experience %>
+  <%= render "shared/breadcrumbs" %>
+  <div class="experience_wrapper__header">
+    <h3><%= @experience.date.to_s %></h3>
+  </div>
+  <div class="experience_wrapper__content">
+    <div class="experience_wrapper__content__experience_show">
+      <div class="experience_image">
+        <%= image_tag @experience.image, :size => '600x300' if @experience.image.attached? %>
+      </div>
+      <div class="experience_detail">
+        <%= "#{@experience.explanation}" %>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,13 +1,17 @@
-<h1 class="title">体験記の登録</h1>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
+<div class="experience_wrapper">
+  <% breadcrumb :experience_new %>
+  <%= render "shared/breadcrumbs" %>
+  <div class="experience_wrapper__header">
+    <h3>体験記の登録</h3>
+  </div>
+  <div class="experience_wrapper__content">
     <%= form_with(model: @experience, local: true) do |f| %>
-      <%= render 'shared/experience_messages' %>
+      <%= render 'shared/error_messages', object: f.object %>
 
-      <%= f.label :date, "date(年月日)" %>
+      <%= f.label :date, "日付" %>
       <%= f.date_field :date, use_month_numbers: true, start_year: 2019, class: "form-control date-picker" %>
 
-      <%= f.label :explanation, "explanation(内容)" %>
+      <%= f.label :explanation, "内容" %>
       <%= f.text_area :explanation, class: 'form-control' %>
 
       <%= f.submit "登録確定", class: "btn btn-primary" %>

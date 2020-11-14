@@ -52,7 +52,6 @@ class PostsController < ApplicationController
     # 正しいユーザーかどうか確認
     def correct_user
       @post = Post.find(params[:id])
-      
       if @post.user_id != current_user.id
         flash[:notice] = "権限はありません"
         redirect_to root_url

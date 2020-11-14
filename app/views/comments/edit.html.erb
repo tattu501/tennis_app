@@ -1,1 +1,9 @@
-<%= render 'shared/post_comments' %>
+<div class="post_wrapper">
+  <% breadcrumb :comment_edit, @comment %>
+  <%= render "shared/breadcrumbs" %>
+  <div class="post_wrapper__content scroll">
+    <div class="comment_area">
+      <%= render 'shared/post_comments' %>
+    </div>
+  </div>
+</div>

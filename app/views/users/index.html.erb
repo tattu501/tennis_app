@@ -1,9 +1,16 @@
-<h1 class="user-title">ユーザ一覧</h1>
-<div class="user-index">
-  <ul>
-    <% @users.each do |user| %>
-      <li><%= link_to  user.name, user, class: 'btn btn-primary btn-experiences' %>
-      </li>
-    <% end %>
-  </ul>
+<div class="user_wrapper">
+  <% breadcrumb :users %>
+  <%= render "shared/breadcrumbs" %>
+  <div class="user_wrapper__header">
+    <h3>ユーザ一覧</h3>
+  </div>
+  <div class="user_wrapper__content">
+    <div class="user_wrapper__content__user_list">
+      <ul>
+        <% @users.each do |user| %>
+          <li><%= link_to  user.name, user, class: 'btn btn-primary btn-users' %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
 </div>
