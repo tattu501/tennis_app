@@ -17,6 +17,11 @@ crumb :user_new do
   parent :root
 end
 
+crumb :login do
+  link "ログイン", login_path
+  parent :root
+end
+
 crumb :user_show do |user|
   link "#{user.name}のプロフィール", user_path
   parent :root
