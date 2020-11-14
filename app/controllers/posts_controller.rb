@@ -21,12 +21,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    begin
-      @post = Post.find(params[:id])
-    rescue => exception
-      post_id = Comment.where(id: params[:id]).select('post_id')
-      @post = Post.find_by(id: post_id)
-    end
+    @post = Post.find(params[:id])
     @comments = @post.comments.includes(:user).order("created_at DESC")
     @comment = @post.comments.build(user_id: current_user.id, post_id: @post.id) if current_user
   end
@@ -57,7 +52,6 @@ class PostsController < ApplicationController
     # 正しいユーザーかどうか確認
     def correct_user
       @post = Post.find(params[:id])
-      
       if @post.user_id != current_user.id
         flash[:notice] = "権限はありません"
         redirect_to root_url
