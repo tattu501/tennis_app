@@ -1,8 +1,10 @@
-<% breadcrumb :experience_new %>
-<%= render "shared/breadcrumbs" %>
-<h3>体験記の登録</h3>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
+<div class="experience_wrapper">
+  <% breadcrumb :experience_new %>
+  <%= render "shared/breadcrumbs" %>
+  <div class="experience_wrapper__header">
+    <h3>体験記の登録</h3>
+  </div>
+  <div class="experience_wrapper__content">
     <%= form_with(model: @experience, local: true) do |f| %>
       <%= render 'shared/experience_messages' %>
 
