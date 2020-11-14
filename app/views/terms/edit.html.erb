@@ -1,8 +1,9 @@
-<% breadcrumb :term_edit, @term %>
-<%= render "shared/breadcrumbs" %>
-<h3><%= @term.term %></h3>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
+<div class="experience_wrapper">
+  <% breadcrumb :term_edit, @term %>
+  <%= render "shared/breadcrumbs" %>
+    <h3><%= @term.term %></h3>
+  </div>
+  <div class="experience_wrapper__content">
     <%= form_with(model: @term, local: true) do |f| %>
       <%= render 'shared/term_messages' %>
 
