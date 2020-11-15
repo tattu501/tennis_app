@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.all.order(:asc)
+    @users = User.all.order("created_at DESC")
   end
 
   def new
