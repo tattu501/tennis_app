@@ -17,7 +17,7 @@ class TermsController < ApplicationController
   end
 
   def index
-    @terms = Term.select('id', 'term')
+    @terms = Term.select('id', 'term').page(params[:page])
   end
 
   def show
