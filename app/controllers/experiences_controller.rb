@@ -17,7 +17,7 @@ class ExperiencesController < ApplicationController
   end
 
   def index
-    @experiences = Experience.select('id', 'date')
+    @experiences = Experience.select('id', 'date').page(params[:page])
   end
 
   def show
