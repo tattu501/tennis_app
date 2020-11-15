@@ -17,12 +17,12 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.includes(:user).all.order("created_at DESC")
+    @posts = Post.includes(:user).all.order("created_at DESC").page(params[:page])
   end
 
   def show
     @post = Post.find(params[:id])
-    @comments = @post.comments.includes(:user).order("created_at DESC")
+    @comments = @post.comments.includes(:user).order("created_at DESC").page(params[:page])
     @comment = @post.comments.build(user_id: current_user.id, post_id: @post.id) if current_user
   end
 

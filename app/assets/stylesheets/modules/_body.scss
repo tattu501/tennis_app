@@ -2,8 +2,6 @@
 
 .body {
   overflow-x: hidden;
-  background-image: image-url('/images/6910.jpg'); 
-  background-size: cover;
 }
 
 .notifications {
@@ -137,6 +135,7 @@ input {
 
 #error_explanation {
   color: red;
+  text-align: center;
   ul {
     color: red;
     margin: 0 0 30px 0;

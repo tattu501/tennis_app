@@ -60,3 +60,4 @@ gem 'data-confirm-modal'
 gem 'jquery-rails'
 gem 'rails-i18n'
 gem "gretel"
+gem 'kaminari'

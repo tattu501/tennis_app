@@ -88,6 +88,9 @@
           </li>
         <% end %>
       </ul>
+      <div class="text-center">
+        <%= paginate @comments %>
+      </div>
       <%= render 'shared/post_comments' %>
     </div>
   </div>
