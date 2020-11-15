@@ -9,7 +9,7 @@
         <ul>
           <% if @user.image.attached? %>
             <li>
-              <%= image_tag @user.image, :size => '160x200' %>
+              <%= image_tag @user.display_image %>
             </li>
           <% end %>
           <li>

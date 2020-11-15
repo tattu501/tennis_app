@@ -61,3 +61,7 @@ gem 'jquery-rails'
 gem 'rails-i18n'
 gem "gretel"
 gem 'kaminari'
+gem 'active_storage_validations'
+gem 'image_processing'
+gem 'mini_magick'
+gem 'aws-sdk-s3', require: false
