@@ -7,7 +7,7 @@
   <div class="term_wrapper__content">
     <div class="term_wrapper__content__term_show">
       <div class="term_image">
-        <%= image_tag @term.image, :size => '600x300' if @term.image.attached? %>
+        <%= image_tag @term.display_image if @term.image.attached? %>
       </div>
       <div class="term_detail">
         <%= "#{@term.explanation}" %>
