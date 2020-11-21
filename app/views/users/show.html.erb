@@ -17,7 +17,7 @@
           </li>
         </ul>
         <div class="user_detail">
-          <%= @user.introduction %>
+          <%= safe_join(@user.introduction.split("\n"),tag(:br)) %>
         </div>
       </div>
     </div>
