@@ -24,7 +24,7 @@
           </div>
         </div>  
         <div class="post_detail__middle_box">
-          <span><%= @post.content %></span>
+          <span><%= safe_join(@post.content.split("\n"),tag(:br)) %></span>
         </div>
         <div class="post_detail__bottom_box">
           <ul class="post_detail__bottom_box__user_actions">
