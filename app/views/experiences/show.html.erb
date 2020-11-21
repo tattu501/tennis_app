@@ -10,7 +10,7 @@
         <%= image_tag @experience.display_image if @experience.image.attached? %>
       </div>
       <div class="experience_detail">
-        <%= "#{@experience.explanation}" %>
+        <%= safe_join(@experience.explanation.split("\n"),tag(:br)) %>
       </div>
     </div>
   </div>
