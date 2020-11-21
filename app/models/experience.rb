@@ -10,6 +10,6 @@ class Experience < ApplicationRecord
 
   # 表示用のリサイズ済み画像を返す
   def display_image
-    image.variant(resize_to_limit: [600, 300])
+    image.variant(resize_to_limit: [500, 250])
   end
 end
