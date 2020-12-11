@@ -21,6 +21,13 @@ RSpec.describe Experience do
         experience.valid?
         expect(experience.errors[:explanation]).to include("を入力してください")
       end
+
+      it "is invalid with a duplicate date" do
+        experience = create(:experience)
+        another_experience = build(:experience, date: experience.date)
+        another_experience.valid?
+        expect(another_experience.errors[:date]).to include("はすでに存在します")
+      end
     end
   end
 end
