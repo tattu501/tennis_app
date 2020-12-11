@@ -20,6 +20,11 @@ ja:
         explanation: 内容
       post:
         content: 投稿内容
+      user:
+        name: 名前
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード確認
   date:
     abbr_day_names:
     - 日
