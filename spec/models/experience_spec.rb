@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Post do
+RSpec.describe Experience do
   describe '#validation' do
     context 'can save' do
       it "is valid with a content, user_id" do
