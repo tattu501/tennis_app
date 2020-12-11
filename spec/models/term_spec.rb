@@ -21,6 +21,14 @@ RSpec.describe Term do
         term.valid?
         expect(term.errors[:explanation]).to include("を入力してください")
       end
+
+      it "is invalid with a duplicate term" do
+        term = create(:term)
+        another_term = build(:term, term: term.term)
+        another_term.valid?
+        expect(another_term.errors[:term]).to include("はすでに存在します")
+      end
+
     end
   end
 end
