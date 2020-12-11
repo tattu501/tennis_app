@@ -32,11 +32,19 @@ RSpec.describe User do
         expect(user.errors[:email]).to include("を入力してください")
       end
 
+      it "is invalid with a duplicate email" do
+        user = create(:user)
+        another_user = build(:user, email: user.email)
+        another_user.valid?
+        expect(another_user.errors[:email]).to include("はすでに存在します")
+      end
+
       it "is invalid because it doesn't contain @ in the email" do
         user = build(:user, email: "test1234")
         user.valid?
         expect(user.errors[:email]).to include("は不正な値です")
       end
+
       it "is invalid because it doesn't contain . in the email" do
         user = build(:user, email: "test1234@test")
         user.valid?
@@ -47,13 +55,6 @@ RSpec.describe User do
         user = build(:user, email: "あtest1234@test.com")
         user.valid?
         expect(user.errors[:email]).to include("は不正な値です")
-      end
-
-      it "is invalid with a duplicate email" do
-        user = create(:user)
-        another_user = build(:user, email: user.email)
-        another_user.valid?
-        expect(another_user.errors[:email]).to include("はすでに存在します")
       end
 
       it "is invalid without a password" do
@@ -71,13 +72,13 @@ RSpec.describe User do
       it "is invalid without a password_confirmation" do
         user = build(:user, password_confirmation: nil)
         user.valid?
-        expect(user.errors[:password_confirmation]).to include("とPasswordの入力が一致しません")
+        expect(user.errors[:password_confirmation]).to include("を入力してください")
       end
 
       it "is invalid because it doesn't match password and password_confirmation" do
         user = build(:user, password_confirmation: "test1234")
         user.valid?
-        expect(user.errors[:password_confirmation]).to include("とPasswordの入力が一致しません")
+        expect(user.errors[:password_confirmation]).to include("とパスワードの入力が一致しません")
       end
     end
   end
