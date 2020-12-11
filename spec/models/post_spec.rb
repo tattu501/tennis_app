@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Experience do
+RSpec.describe Post do
   describe '#validation' do
     context 'can save' do
       it "is valid with a date, explaination" do
