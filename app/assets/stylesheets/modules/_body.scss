@@ -1,6 +1,15 @@
 @import "config/variables";
 
-.body {
+html, body {
+  background-image: image-url('6910.png');
+  min-height: 100%;
+  background-size: 90%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center 80px;
+}
+
+body {
   overflow-x: hidden;
 }
 
@@ -153,4 +162,8 @@ input {
 
 .change-dropdown-menu {
   background-color: #DDFFDD;
+}
+
+.form_indent {
+  margin: 25px;
 }

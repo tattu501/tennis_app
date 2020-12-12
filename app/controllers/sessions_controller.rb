@@ -14,6 +14,14 @@ class SessionsController < ApplicationController
     end
   end
 
+  def guest_login
+    user = User.find_or_create_by!(name: 'ゲストユーザ', email: 'guest@example.com') do |user|
+      user.password = SecureRandom.urlsafe_base64
+    end
+    log_in user
+    redirect_to root_path, notice: 'ゲストユーザーとしてログインしました。'
+  end
+
   def destroy
     log_out
     redirect_to root_url

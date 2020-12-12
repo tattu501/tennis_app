@@ -1,24 +1,59 @@
-# README
+# 未経験から始めるテニス
+趣味でしているテニスのブログ
+下記ページで公開中です。
+https://tennis-blog.herokuapp.com/
+※近日中にサーバをAWSへ移管する予定
+​
+## アプリ概要
+趣味で行っているテニスについて、日報形式で活動内容を発信するサイトです。
+掲示板機能も備えており、ユーザ同士でテニスに関する情報交換、疑問の解決をします。
+Ruby on Railsで制作しました。
+​
+作成した背景や想いなど、より詳細な情報は下記をご覧ください。  
+[ポートフォリオ解説](https://qiita.com/tattu501/items/d98c6e9fc7cb082a82ff)
+​
+## 機能
+- ユーザ登録：名前、メールアドレス、パスワードで登録します。任意で自己紹介文と画像も掲載できます。
+- ログイン：メールアドレス、パスワードでログインできます。ゲストログインも可能です。
+- ブログ：日付単位でテニスに関する記事を登録します。記事の構成は本文と画像（任意）です。
+- 掲示版：掲示板に質問や役立つ情報を投稿できます。
+- コメント：掲示板の投稿に対しコメントをすることができます。
+- 用語集：テニスに関する用語の解説記事を登録します。記事の構成は本文と画像（任意）です。
+​
+## 使い方
+### ブログ
+1. トップページの「体験記」ボタンをクリックし、一覧ページに行きます。
+2. 一覧ページにて体験記を見たい日付のボタンをクリックし、詳細ページに行きます。
+3. 詳細ページで体験記の内容を確認します。
+### 掲示版
+1. ユーザ登録とログイン、もしくは登録せずにゲストログインをします。
+2. ヘッダの「掲示板への投稿」ボタンをクリックし、投稿ページに行きます。
+3. 投稿ページのフォームに内容を入力し、送信ボタンをクリックします。
+4. 掲示板に送信した投稿の内容が追加されます。
+### コメント
+1. ユーザ登録とログイン、もしくは登録せずにゲストログインをします。
+2. トップページの「掲示板」ボタンをクリックし、掲示板に行きます。
+3. 掲示板からコメントをしたい投稿をクリックし、投稿詳細ページに行きます。
+4. 投稿詳細ページの下部にあるフォームにコメントを入力し、送信ボタンをクリックします。
+​
+## ローカル環境へのインストール方法
+```
+$ git clone https://github.com/tattu501/tennis_app
+$ cd tennis_app
+$ bundle install
+$ rails db:create
+$ rails db:migrate
+$ rails db:seed
+```
+​
+## ER図
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+​
+## その他
+現在も開発を継続しており、順次実装予定です。  
+実装予定の機能はIssuesよりご確認いただけます。  
+https://github.com/tattu501/tennis_app/issues
+​
+## 作者
+Tatu(https://twitter.com/Tatu78725066)  
+mail to: tatsumania150@gamil.com

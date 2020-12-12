@@ -8,7 +8,9 @@
     <div class="user_wrapper__content__user_list">
       <ul>
         <% @users.each do |user| %>
-          <li><%= link_to  user.name, user, class: 'btn btn-primary btn-users' %></li>
+          <% if user.email != "guest@example.com" %>
+            <li><%= link_to  user.name, user, class: 'btn btn-primary btn-users' %></li>
+          <% end %>
         <% end %>
       </ul>
     </div>

@@ -2,6 +2,7 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "reset";
 @import "modules/body";
 @import "modules/kaminari";
 @import "shared/header";
@@ -12,4 +13,3 @@
 @import "posts";
 @import "comments";
 @import "users";
-@import "reset";
