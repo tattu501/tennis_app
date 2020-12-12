@@ -47,7 +47,7 @@ $ rails db:seed
 ```
 ​
 ## ER図
-
+https://user-images.githubusercontent.com/61368201/101986842-d426a300-3cd3-11eb-89e3-f4e7216ef7e4.png
 ​
 ## その他
 現在も開発を継続しており、順次実装予定です。  
