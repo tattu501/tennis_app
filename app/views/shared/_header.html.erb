@@ -58,6 +58,7 @@
         <% end %>
       <% else %>
         <li class="header__bar__user_nav__btn"><%= link_to "ユーザ登録", signup_path %></li>
+        <li class="header__bar__user_nav__btn"><%= link_to "ゲストログイン", guest_login_path, method: :post %></li>
         <li class="header__bar__user_nav__btn"><%= link_to "ログイン", login_path %></li>
       <% end %>
     </ul>
