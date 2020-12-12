@@ -8,22 +8,29 @@
     <%= form_with(model: @user, local: true) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
 
+      <span class="label label-danger">必須</span>
       <%= f.label :name, "名前" %>
       <%= f.text_field :name, class: 'form-control' %>
 
+      <span class="label label-danger">必須</span>
       <%= f.label :email, "メールアドレス" %>
       <%= f.email_field :email, class: 'form-control' %>
 
-      <%= f.label :introduction, "自己紹介文、任意" %>
-      <%= f.text_area :introduction, class: 'form-control' %>
-
+      <span class="label label-danger">必須</span>
       <%= f.label :password, "パスワード" %>
       <%= f.password_field :password, class: 'form-control' %>
 
+      <span class="label label-danger">必須</span>
       <%= f.label :password_confirmation, "パスワード確認" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
+      <div class="user_wrapper__content__option"></div>
+      <span class="label label-success">任意</span>
+      <%= f.label :introduction, "自己紹介文" %>
+      <%= f.text_area :introduction, class: 'form-control' %>
+
       <%= f.submit "登録確定", class: "btn btn-primary" %>
+      <span class="label label-success">任意</span>
       <span class="image">
         <%= f.file_field :image, accept: "image/jpeg,image/gif,image/png" %>
       </span>
