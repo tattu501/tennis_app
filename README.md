@@ -47,7 +47,7 @@ $ rails db:seed
 ```
 ​
 ## ER図
-(images/er_image.png "hero")
+https://github.com/tattu501/tennis_app/blob/master/app/assets/images/er_image.png
 ​
 ## その他
 現在も開発を継続しており、順次実装予定です。  
