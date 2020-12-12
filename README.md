@@ -49,6 +49,7 @@ $ rails db:seed
 ## ER図
 <img width="646" alt="er_image" src="https://user-images.githubusercontent.com/61368201/101987469-a2174000-3cd7-11eb-8f19-f85e111305ac.png">
 ​
+
 ## その他
 現在も開発を継続しており、順次実装予定です。  
 実装予定の機能はIssuesよりご確認いただけます。  
