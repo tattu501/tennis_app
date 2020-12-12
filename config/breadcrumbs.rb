@@ -28,8 +28,8 @@ crumb :user_show do |user|
 end
 
 crumb :user_edit do |user|
-  link "#{user.name}のプロフィール編集", edit_user_path
-  parent :users
+  link "編集", edit_user_path
+  parent :user_show, user
 end
 
 crumb :posts do
