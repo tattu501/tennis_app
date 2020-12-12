@@ -1,15 +1,15 @@
 # 未経験から始めるテニス
-趣味でしているテニスのブログ
-下記ページで公開中です。
-https://tennis-blog.herokuapp.com/
+趣味でしているテニスのブログ<br>
+下記ページで公開中です。<br>
+https://tennis-blog.herokuapp.com/<br>
 ※近日中にサーバをAWSへ移管する予定
 ​
 ## アプリ概要
-趣味で行っているテニスについて、日報形式で活動内容を発信するサイトです。
-掲示板機能も備えており、ユーザ同士でテニスに関する情報交換、疑問の解決をします。
+趣味で行っているテニスについて、日報形式で活動内容を発信するサイトです。<br>
+掲示板機能も備えており、ユーザ同士でテニスに関する情報交換、疑問の解決をします。<br>
 Ruby on Railsで制作しました。
 ​
-作成した背景や想いなど、より詳細な情報は下記をご覧ください。  
+作成した背景や想いなど、より詳細な情報は下記をご覧ください。<br>
 [ポートフォリオ解説](https://qiita.com/tattu501/items/d98c6e9fc7cb082a82ff)
 ​
 ## 機能
@@ -49,13 +49,11 @@ $ rails db:seed
 ## ER図
 <img width="646" alt="er_image" src="https://user-images.githubusercontent.com/61368201/101987469-a2174000-3cd7-11eb-8f19-f85e111305ac.png">
 ​
-
 ## その他
 現在も開発を継続しており、順次実装予定です。  
 実装予定の機能はIssuesよりご確認いただけます。  
 https://github.com/tattu501/tennis_app/issues
 ​
-
 ## 作者
 Tatu(https://twitter.com/Tatu78725066)  
 mail to: tatsumania150@gamil.com
