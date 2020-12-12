@@ -12,6 +12,13 @@
           <li class="header__bar__user_nav__btn">
             <%= link_to "ユーザ一覧", users_path %>
           </li>
+          <% if controller.controller_name == 'users' && controller.action_name == 'show' %>
+            <% if current_user?(@user) %>
+              <li class="header__bar__user_nav__btn">
+                <%= link_to "プロフィールの編集", edit_user_path(current_user) %>
+              </li>
+            <% end %>
+          <% end %>
           <li class="dropdown header__bar__user_nav__btn">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               アカウント<b class="caret"></b>
