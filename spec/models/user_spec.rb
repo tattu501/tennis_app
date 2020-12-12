@@ -69,12 +69,6 @@ RSpec.describe User do
         expect(user.errors[:password]).to include("は6文字以上で入力してください")
       end
 
-      it "is invalid without a password_confirmation" do
-        user = build(:user, password_confirmation: nil)
-        user.valid?
-        expect(user.errors[:password_confirmation]).to include("を入力してください")
-      end
-
       it "is invalid because it doesn't match password and password_confirmation" do
         user = build(:user, password_confirmation: "test1234")
         user.valid?
