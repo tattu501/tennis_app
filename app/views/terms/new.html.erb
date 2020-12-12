@@ -4,20 +4,29 @@
   <div class="term_wrapper__header">
     <h3>用語の登録</h3>
   </div>
+
+  <div class="form_indent"></div>
   <div class="term_wrapper__content">
     <%= form_with(model: @term, local: true) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
 
+      <span class="label label-danger">必須</span>
       <%= f.label :term, "用語" %>
       <%= f.text_field :term, class: 'form-control' %>
 
+      <span class="label label-danger">必須</span>
       <%= f.label :explanation, "内容" %>
       <%= f.text_area :explanation, class: 'form-control' %>
 
-      <%= f.submit "登録確定", class: "btn btn-primary" %>
+      <div class="form_indent"></div>
+      <span class="label label-success">任意</span>
       <span class="image">
+        <%= f.label :image, "説明用の画像" %>
         <%= f.file_field :image, accept: "image/jpeg,image/gif,image/png" %>
       </span>
+
+      <div class="form_indent"></div>
+      <%= f.submit "登録確定", class: "btn btn-primary" %>
     <% end %>
     <%= render 'shared/upload_image' %>
   </div>
