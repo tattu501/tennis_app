@@ -20,9 +20,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:success] = "本アプリにようこそ！"
-      log_in @user 
-      redirect_to @user
+      log_in @user
+      redirect_to @user, notice: '未経験から始めるテニスへようこそ！'
     else
       render 'new'
     end
@@ -35,8 +34,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      flash[:success] = "ユーザプロフィールを更新しました。"
-      redirect_to @user
+      redirect_to @user, notice: "ユーザプロフィールを更新しました。"
     else
       render 'edit'
     end
