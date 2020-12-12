@@ -7,6 +7,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    if @user.email = "guest@example.com"
+      redirect_to users_url, notice: "ゲストユーザのプロフィールはございません。"
+    end
   end
 
   def index
