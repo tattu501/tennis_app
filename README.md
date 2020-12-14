@@ -57,4 +57,4 @@ https://github.com/tattu501/tennis_app/issues
 ​
 ## 作者
 Tatu(https://twitter.com/Tatu78725066)  
-mail to: tatsumania150@gamil.com
+mail to: tatsumania150@gmail.com
