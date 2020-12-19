@@ -18,6 +18,13 @@ set :rbenv_ruby, '2.7.0'
 set :ssh_options, auth_methods: ['publickey'],
                   keys: ['~/.ssh/Railsportfolio.pem'] 
 
+set :default_env, {
+  rbenv_root: "/home/user/.rbenv",
+  path: "/home/user/.rbenv/bin:$PATH",
+  region: ENV["S3_REGION"],
+  aws_access_key_id: ENV["S3_ACCESS_KEY"],
+  aws_secret_access_key: ENV["S3_SECRET_KEY"]
+}
 # プロセス番号を記載したファイルの場所
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
 
