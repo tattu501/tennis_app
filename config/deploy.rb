@@ -1,6 +1,6 @@
 # config valid only for current version of Capistrano
 # capistranoのバージョンを記載。固定のバージョンを利用し続け、バージョン変更によるトラブルを防止する
-lock '13.0.1'
+lock '3.14.1'
 
 # Capistranoのログの表示に利用する
 set :application, 'tennis_app'
@@ -16,7 +16,7 @@ set :rbenv_ruby, '2.7.0'
 
 # どの公開鍵を利用してデプロイするか
 set :ssh_options, auth_methods: ['publickey'],
-                  keys: ['<ローカルPCのEC2インスタンスのSSH鍵(pem)へのパス（例：~/.ssh/key_pem.pem）>'] 
+                  keys: ['~/.ssh/Railsportfolio.pem'] 
 
 # プロセス番号を記載したファイルの場所
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
