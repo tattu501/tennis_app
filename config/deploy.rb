@@ -2,6 +2,10 @@
 # capistranoのバージョンを記載。固定のバージョンを利用し続け、バージョン変更によるトラブルを防止する
 lock '3.14.1'
 
+require "capistrano/deploy"
+require "capistrano/scm/git"
+install_plugin Capistrano::SCM::Git
+
 # Capistranoのログの表示に利用する
 set :application, 'tennis_app'
 
