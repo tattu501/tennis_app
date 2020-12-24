@@ -1,8 +1,7 @@
 # 未経験から始めるテニス
 趣味でしているテニスのブログ<br>
 下記ページで公開中です。<br>
-https://tennis-blog.herokuapp.com/<br>
-※近日中にサーバをAWSへ移管する予定
+https://tennis-beginners-blog.com/
 ​
 ## アプリ概要
 趣味で行っているテニスについて、日報形式で活動内容を発信するサイトです。<br>
