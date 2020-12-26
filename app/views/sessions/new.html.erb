@@ -6,9 +6,11 @@
   </div>
   <div class="session_wrapper__content">
     <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
+      <span class="label label-danger">必須</span>
       <%= f.label :email, "メールアドレス"  %>
       <%= f.email_field :email, class: 'form-control' %>
 
+      <span class="label label-danger">必須</span>
       <%= f.label :password, "パスワード" %>
       <%= f.password_field :password, class: 'form-control' %>
 
